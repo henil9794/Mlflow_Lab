@@ -11,7 +11,7 @@ This project demonstrates a production-grade MLOps workflow using **MLflow** to 
 
 ## Setup & Installation
 
-### 1. Environment Setup
+### Environment Setup
 To run this project you can follow these steps:
 
 1. Create a new Conda environment or Virtual environment
@@ -19,14 +19,14 @@ To run this project you can follow these steps:
 conda create -n mlflow_housing python=3.9 -y
 conda activate mlflow_housing
 ```
-2. Download the required libraries
+2. Download and install the required libraries
 ```bash
 pip install -r requirements.txt
 ```
 
 3. You can run this project by either running cells in sequential order or run python script.
 
-    A. ipynb file
+A. ipynb file
 
     - Run the cells in sequential order
     Note: You can change the value of parameters and you can compare the perfromance of model with different parameters using MLflow.
