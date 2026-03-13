@@ -37,10 +37,10 @@ if __name__ == "__main__":
     except Exception as e:
         logger.exception("Unable to load training data. Error: %s", e)
 
-    # 2. Split data into training and test sets(80, 20)
+    # Split data into training and test sets(80, 20)
     train_x, test_x, train_y, test_y = train_test_split(X, y, test_size=0.2, random_state=42)
 
-    # 3. Get hyperparameters from command line arguments
+    # Get hyperparameters from command line arguments
     n_estimators = int(sys.argv[1]) if len(sys.argv) > 1 else 100
     max_depth = int(sys.argv[2]) if len(sys.argv) > 2 else 10
 
