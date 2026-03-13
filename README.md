@@ -60,11 +60,11 @@ mlflow ui
 
 4. Open your browser and navigate to: http://127.0.0.1:5000
 
-- You can see the MLflow Dashboard like below image:
+You can see the MLflow Dashboard like below image:
 
 ![MLflow Dashboard](images/MLflowDashboard.png)
 
-- You can see different metrics, compare model's perfromance and track the model as shown in below images
+You can see different metrics, compare model's perfromance and track the model as shown in below images
 
 ![MLflow1](images/MLflow1.png)
 
@@ -90,13 +90,13 @@ If the script finishes successfully MLflow marks that specific run as "Finished"
 
 How it is saved in the code
 
-Parameters (The Setup): The mlflow.log_param() lines capture your choices, like the number of trees (n_estimators). This is saved as a simple text file inside the mlruns folder, making it very easy for the UI to read and display in a table.
+Parameters: The mlflow.log_param() lines capture your choices, like the number of trees (n_estimators). This is saved as a simple text file inside the mlruns folder, making it very easy for the UI to read and display in a table.
 
-Metrics (The Performance): The mlflow.log_metric() lines record your scores, such as rmse and r2. Unlike parameters, these are saved with a timestamp. This allows MLflow to create those performance graphs you see in the UI, showing how the model improved or worsened as you changed settings.
+Metrics: The mlflow.log_metric() lines record your scores, such as rmse and r2. Unlike parameters, these are saved with a timestamp. This allows MLflow to create those performance graphs you see in the UI, showing how the model improved or worsened as you changed settings.
 
-Artifacts (The Files): The mlflow.log_artifact() command takes the physical .png file of your Feature Importance graph and moves a copy of it into a dedicated artifacts sub-folder. This keeps your project folder clean while ensuring the image is forever linked to that specific version of the model.
+Artifacts: The mlflow.log_artifact() command takes the physical .png file of your Feature Importance graph and moves a copy of it into a dedicated artifacts sub-folder. This keeps your project folder clean while ensuring the image is forever linked to that specific version of the model.
 
-The Model (The Brain): The mlflow.sklearn.log_model() command is the most complex. It doesn't just save the model; it saves a folder containing the model itself (a .pkl file), a list of the exact library versions needed to run it (conda.yaml), and the Signature (the input/output contract).
+The Model: The mlflow.sklearn.log_model() command is the most complex. It doesn't just save the model; it saves a folder containing the model itself (a .pkl file), a list of the exact library versions needed to run it (conda.yaml), and the Signature (the input/output contract).
 
 When you run MLflow on your laptop without a remote server, it creates an mlruns folder in your current directory. It uses a File-based Store.
 
