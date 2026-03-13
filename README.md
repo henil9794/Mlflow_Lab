@@ -57,6 +57,8 @@ python run mlflow_lab_housing_regression.py 200 15
 mlflow ui
 ```
 
+4. Open your browser and navigate to: http://127.0.0.1:5000
+
 - You can see the MLflow Dashboard like below image:
 
 ![MLflow Dashboard](images/MLflowDashboard.png)
@@ -76,8 +78,6 @@ mlflow ui
 ![MLflow6](images/MLflow6.png)
 
 ![MLflow7](images/MLflow7.png)
-
-4. Open your browser and navigate to: http://127.0.0.1:5000
 
 ## How it works
 
