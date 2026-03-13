@@ -26,26 +26,27 @@ pip install -r requirements.txt
 
 3. You can run this project by either running cells in sequential order or run python script.
 
-A. ipynb file
+    A. ipynb file
 
-- Run the cells in sequential order
-Note: You can change the value of parameters and you can compare the perfromance of model with different parameters using MLflow.
+    - Run the cells in sequential order
+    Note: You can change the value of parameters and you can compare the perfromance of model with different parameters using MLflow.
 
-- Run this command to launch MLflow UI
+    - Run this command to launch MLflow UI
+
 ```bash
 mlflow ui
 ```
 
 - You will be able to see MLflow UI Dashboard and you can see runs of model and compare the performance of the model with the different parameters.
 
-B. Python script
+    B. Python script
 
-- Run this command in your terminal
+    - Run this command in your terminal
 ```bash
 python run mlflow_lab_housing_regression.py
 ```
 
-If you run it using this command then by default it takes value of n_estimators=100, max_depth=10.
+- If you run it using this command then by default it takes value of n_estimators=100, max_depth=10.
 
 - Run this command in your terminal to train model using different value you can use this command
 ```bash
