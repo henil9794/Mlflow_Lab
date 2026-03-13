@@ -21,8 +21,9 @@ logger = logging.getLogger(__name__)
 
 def eval_metrics(actual, pred):
     rmse = np.sqrt(mean_squared_error(actual, pred))
+    mae = mean_absolute_error(actual, pred)
     r2 = r2_score(actual, pred)
-    return rmse, r2
+    return rmse, mae, r2
 
 if __name__ == "__main__":
     warnings.filterwarnings("ignore")
@@ -49,16 +50,18 @@ if __name__ == "__main__":
 
         predicted_values = rf.predict(test_x)
 
-        (rmse, r2) = eval_metrics(test_y, predicted_values)
+        (rmse, mae, r2) = eval_metrics(test_y, predicted_values)
 
         print(f"RandomForest model (n_estimators={n_estimators}, max_depth={max_depth}):")
         print(f"RMSE: {rmse}")
+        print(f"MAE: {mae}")
         print(f"R2: {r2}")
 
         mlflow.log_param("n_estimators", n_estimators)
         mlflow.log_param("max_depth", max_depth)
         mlflow.log_metric("rmse", rmse)
         mlflow.log_metric("r2", r2)
+        mlflow.log_metric("mae", mae)
         
         plt.figure(figsize=(10,6))
         feat_importances = pd.Series(rf.feature_importances_, index=X.columns)
