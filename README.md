@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 3. You can run this project by either running cells in sequential order or run python script.
 
-A. ipynb file
+    A. ipynb file
 
     - Run the cells in sequential order
     Note: You can change the value of parameters and you can compare the perfromance of model with different parameters using MLflow.
